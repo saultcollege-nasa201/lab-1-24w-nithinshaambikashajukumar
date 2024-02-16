@@ -9,9 +9,9 @@ document.forms.contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     console.log("prevent submit");
   }
-  if (!/^[A-Za-z0-9.,!""]*$/.test(messageInput.value)) {
+  if (!/^[A-Za-z0-9.,!]*$/.test(messageInput.value)) {
     document.getElementById("messageError").textContent =
-      "NO SPECIAL CHARACTERS ALLOWED IN THE NAME FIELD!!!";
+      "NO SPECIAL CHARACTERS ALLOWED IN THIS FIELD EXCEPT . , ! ";
     event.preventDefault();
     console.log("prevent submit");
   }
