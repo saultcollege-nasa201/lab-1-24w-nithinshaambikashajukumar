@@ -9,4 +9,10 @@ document.forms.contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     console.log("prevent submit");
   }
+  if (!/^[A-Za-z0-9.,!""]*$/.test(messageInput.value)) {
+    document.getElementById("characterError").textContent =
+      "NO SPECIAL CHARACTERS ALLOWED!!!";
+    event.preventDefault();
+    console.log("prevent submit");
+  }
 });
