@@ -1,8 +1,20 @@
-console.log("hi from the script file");
+document.forms.contactForm.addEventListener("submit", (event) => {
+  let nameInput = document.getElementById("name");
+  let emailInput = document.getElementById("email");
+  let messageInput = document.getElementById("message");
 
-function add(a,b) {
-return a+b;
+  if (!/^[A-Za-z]+$/.test(nameInput.value)) {
+    document.getElementById("characterError").textContent =
+      "NO SPECIAL CHARACTERS OR NUMBERS ALLOWED!!!";
+    event.preventDefault();
+    console.log("prevent submit");
+  }
 
-}
-var sum= add(123, 456);
-console.log(sum);
+  if (!/^[A-Za-z0-9.,!]*$/.test(messageInput.value)) {
+    document.getElementById("messageError").textContent =
+      "NO SPECIAL CHARACTERS ALLOWED IN THIS FIELD EXCEPT . , ! ";
+    event.preventDefault();
+    console.log("prevent submit");
+  }
+
+});

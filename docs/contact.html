@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
     <title>connect to SHA</title>
 	<link rel="stylesheet" href="css/contact.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header class="header">
@@ -34,27 +35,28 @@
                 <div class="col-lg-8">
                     <div class="contact-form-card">
                         <h4 class="contact-title">Mail To me</h4>
-                        <form action="mailto:nithinshanithu8@gmail.com">
+                        <form action="mailto:nithinshanithu8@gmail.com" name="contactForm">
                             <div class="form-group">
-                                <input  class="form-control" type="text"  placeholder="First and Last Names" required class="textbox">
+                                <input  class="form-control" type="text"  placeholder="First and Last Names" required class="textbox" id="name">
                             </div>
+                            <div id="characterError" ></div>
                             <div class="form-group">
                                 <input class="form-control" type="email" id="email" placeholder="email id" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder=" Your Message"  required></textarea>
+                                <textarea class="form-control" placeholder=" Your Message" id="message" required></textarea>
                             </div>
+                            <div id="messageError" ></div>
                             <div class="form-group" >
                                 <button style="background-color: red; color: black;">
-                                    
                                   Send
-                                    </a>
-                                  </button>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
         </div>
     </div>
+
 </body>
 </html>
