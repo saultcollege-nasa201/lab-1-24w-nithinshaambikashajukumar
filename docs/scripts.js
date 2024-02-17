@@ -5,18 +5,9 @@ document.forms.contactForm.addEventListener("submit", (event) => {
 
   if (!/^[A-Za-z]+$/.test(nameInput.value)) {
     document.getElementById("characterError").textContent =
-      "NO SPECIAL CHARACTERS ALLOWED!!!";
+      "NO SPECIAL CHARACTERS OR NUMBERS ALLOWED!!!";
     event.preventDefault();
     console.log("prevent submit");
-  }
-
-  function validateName(name) {
-    if (name.length <= 5) {
-      return true;
-    } else {
-      console.log("Name is too long");
-      return false;
-    }
   }
 
   if (!/^[A-Za-z0-9.,!]*$/.test(messageInput.value)) {
@@ -25,4 +16,5 @@ document.forms.contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     console.log("prevent submit");
   }
+
 });
